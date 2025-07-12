@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #1a1a1a;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+#taskInput::placeholder {
+  color: #888;
+}
+
+#addTaskBtn {
+  padding: 10px 12px;
+  background-color: #8000ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+#addTaskBtn:hover {
+  background-color: #9e30ff;
+}
+
+#taskList {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ff1a1a;
+}
+
+
+.completed span{
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.7;
+}
+
+.theme-toggle{
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover{
+  transform: scale(1.1)
+}
+
+body.light{
+  background-color: #f1f1f1;
+}
+
+body.light .container{
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+body.light h1,
+body.light .task-item,
+body.light #taskInput{
+  color: #222;
+}
+
+body.light .task-item{
+  background-color: #eaeaea;
+}
+
+body.light .delete-btn{
+  background-color: #ff6666;
+}
+
+body.light .delete-btn:hover{
+  background-color: #e60000;
+}
+
+body.light #taskinput{
+  background-color: #ddd;
+}
+
+body.light #addTaskBtn{
+  background-color: #6a00cc;
+}
+
+body.light #addTaskBtn:hover{
+  background-color: #7d2fff;
+}
+
+body{
+  background: url(/images/bg_img.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
