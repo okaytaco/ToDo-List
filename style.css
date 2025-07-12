@@ -246,7 +246,7 @@ body{
 }
 
 .container {
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -282,4 +282,33 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(130deg, #00ffcc, #66ffcc, #007755, #003322);
+  background-size: 400% 400%;
+  animation: auroraGlow 10s ease infinite;
+  z-index: -2;
+  opacity: 0.09;
+  filter: blur(140px);
+}
+
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+  z-index: -3;
+}
+
+
+@keyframes auroraGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
