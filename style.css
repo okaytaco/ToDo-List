@@ -19,14 +19,16 @@ body {
 
 
 body.dark-mode .container {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  padding: 20px 25px;
-  border-radius: 12px;
-  width: 300px;
+  padding: 30px 25px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  color: white;
+  text-align: center;
 }
 
 
@@ -128,4 +130,9 @@ h1 {
   }
 }
 
-/*test
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
