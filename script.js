@@ -40,12 +40,16 @@ function renderTask(task){
         li.classList.toggle('completed')
         saveTasks();
     })
-    li.querySelector('button').addEventListener('click', (e) => {
-        e.stopPropagation()  //prevent toggle from firing
-        tasks = tasks.filter(t => t.id !== task.id)
-        li.remove();
-        saveTasks();
-    });
+    li.querySelector(".delete-btn").addEventListener("click", () => {
+  li.classList.add("removing");
+  setTimeout(() => {
+    tasks = tasks.filter(t => t.id !== task.id);
+    saveTasks();
+    li.remove();
+  }, 300);
+});
+
+
     taskList.appendChild(li);
     
 }
